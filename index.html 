@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa | Saúde Ocular</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+            <h1>Pesquisa de Saúde Ocular</h1>
+            <p> Levantamento com professores e funcionários do Colégio Estadual Dr. Eduardo Virmond Suplicy</p>
+        </div>
+        <nav aria-label="Navegação Principal">
+            <a href="#" class="cabecalho-link">Início</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="introducao">
+            <h2>Resultados da Pesquisa</h2>
+            <p class="instrucao">Passe o mouse ou toque nos cartões para revelar os dados de cada etapa do projeto</p>
+        </section>
+
+        <section class="grid-cartoes" aria-label="Cartões de Resultados">
+            
+            <!-- Cartão 1: Sobre a Pesquisa -->
+            <article class="cartao" tabindex="0">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <span class="tag">01</span>
+                        <h3>Sobre o Projeto</h3>
+                        <p class="chamada">Como foi desenvolvida a pesquisa pela turma 2ºB?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <h3>Contexto do Trabalho</h3>
+                        <p>No 2º trimestre de 2026, alunos do 2º ano MAT/CNT realizaram um levantamento de dados em Física e Tecnociência/Programação.</p>
+                        <p>O grupo entrevistou <strong>31 professores e funcionários</strong> com formulários específicos para analisar a saúde óptique da comunidade escolar.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 2: Uso de Correção Visual -->
+            <article class="cartao" tabindex="0">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <span class="tag">02</span>
+                        <h3>Correção Visual</h3>
+                        <p class="chamada">Quantos profissionais utilizam óculos ou lentes?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <h3>Uso de Óculos</h3>
+                        <ul class="lista-estatisticas">
+                            <li><strong>45,2%</strong> utilizam óculos continuamente</li>
+                            <li><strong>22,6%</strong> usam apenas para leitura</li>
+                            <li><strong>32,3%</strong> não usam correção visual</li>
+                        </ul>
+                        <p class="destaque-texto">Alterações visuais estão presentes na grande maioria dos entrevistados.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 3: Consultas e Telas -->
+            <article class="cartao" tabindex="0">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <span class="tag">03</span>
+                        <h3>Consultas & Telas</h3>
+                        <p class="chamada">Qual a frequência médica e o tempo diante das telas?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <h3>Rotina e Exposição</h3>
+                        <p><strong>51,6%</strong> realizam acompanhamento oftalmológico regular, enquanto <strong>48,4%</strong> não frequentam o médico com regularidade.</p>
+                        <p>Além disso, <strong>48,4%</strong> passam de <strong>4 a 5 horas diárias</strong> expostos a telas digitais no trabalho e rotina diária.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 4: Sintomas e Conclusão -->
+            <article class="cartao" tabindex="0">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <span class="tag">04</span>
+                        <h3>Sintomas & Conclusão</h3>
+                        <p class="chamada">Quais foram as principais queixas identificadas?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <h3>Sintomas & Achados</h3>
+                        <p>A <strong>visão embaçada</strong> foi o sintoma mais relado, atingindo <strong>74,2%</strong> dos participantes.</p>
+                        <p class="conclusao-box"><strong>Conclusão:</strong> O uso frequente de telas e a falta de consultas periódicas exigem atenção para preservar a saúde ocular na escola.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Projeto desenvolvido por Lucas M. (Nº 18), Manuella G. (Nº 19), Gabriel Z. (Nº 40) e Davi B. | Turma 2º B MAT/CNT</p>
+    </footer>
+</body>
+</html>

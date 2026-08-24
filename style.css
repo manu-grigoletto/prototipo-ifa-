@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #0284c7;
+    --primary-dark: #0369a1;
+    --bg-color: #f8fafc;
+    --card-bg-front: #ffffff;
+    --card-bg-back: #f0f9ff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent: #0ea5e9;
+    --border-radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* HEADER */
+.cabecalho {
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.cabecalho-conteudo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cabecalho-conteudo p {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: 4px;
+}
+
+.cabecalho-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: background-color 0.2s;
+}
+
+.cabecalho-link:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.introducao {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.introducao h2 {
+    font-size: 1.875rem;
+    color: var(--primary-dark);
+}
+
+.instrucao {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 6px;
+}
+
+/* GRID DOS CARTÕES */
+.grid-cartoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    perspective: 1000px;
+}
+
+/* ESTRUTURA DOS FLASHCARDS */
+.cartao {
+    height: 320px;
+    cursor: pointer;
+    outline: none;
+}
+
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.cartao:hover .cartao-interno,
+.cartao:focus .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+.cartao-frente, .cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: var(--border-radius);
+    backface-visibility: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* FRENTE DO CARTÃO */
+.cartao-frente {
+    background-color: var(--card-bg-front);
+    align-items: flex-start;
+    text-align: left;
+}
+
+.tag {
+    background-color: #e0f2fe;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.cartao-frente h3 {
+    font-size: 1.35rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.chamada {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* VERSO DO CARTÃO */
+.cartao-verso {
+    transform: rotateY(180deg);
+    background-color: var(--card-bg-back);
+    border-color: #bae6fd;
+    text-align: left;
+    font-size: 0.9rem;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.cartao-verso h3 {
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+    margin-bottom: 4px;
+}
+
+.lista-estatisticas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 4px 0;
+}
+
+.lista-estatisticas li {
+    background: #ffffff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+}
+
+.destaque-texto {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.conclusao-box {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed var(--accent);
+    font-size: 0.85rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0f172a;
+    padding: 20px;
+    color: #94a3b8;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: auto;
+}
+
+/* RESPONSIVIDADE PARA TELAS MENORES */
+@media (max-width: 640px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
